@@ -3,6 +3,9 @@
 - [Introduction](#introduction)
     - [Purpose](#purpose)
 - [Terms](#terms)
+    - [ENVIRONMENT_VARIABLE](#user)
+    - [MUST](#must)
+    - [USER](#user)
 - [Path determination](#path-determination)
     - [Global app data](#global-app-data)
     - [Per user app data](#per-user-app-data)
@@ -11,27 +14,37 @@
 
 ## Purpose
 
-The app data spec's purpose is to standardize determination of where app
-data is stored in the context of a given app & platform/OS.
+The app data spec's purpose is to standardize determination of where to
+store app data on a given platform/OS.
 
 ## Terms
 
-- environment variable: as defined by
-  [wikipedia](https://en.wikipedia.org/wiki/Environment_variable)
-- user: as defined by
-  [wikipedia](https://en.wikipedia.org/wiki/User_(computing))
+### ENVIRONMENT_VARIABLE
+
+As defined by
+[wikipedia](https://en.wikipedia.org/wiki/Environment_variable)
+
+### MUST
+
+As defined by [RFC 2119](https://tools.ietf.org/html/rfc2119)
+
+### USER
+
+As defined by
+[wikipedia](https://en.wikipedia.org/wiki/User_(computing))
 
 # Path determination
 
-The path of app data can be determined via the following templates
-where:
+The path of app data [MUST](#must) be determined via hydration of the
+following templates where:
 
-- ${env:NAME} represents environment variable resolved at runtime
+- ${env:NAME} represents an
+  [ENVIRONMENT_VARIABLE](#environment_variable) resolved at runtime
 
 ## Global app data:
 
 Global app data represents globally applicable app data, i.e. not
-specific to a user.
+specific to a [USER](#user).
 
 | OS      | Path template                | Reference                                                                                                                                                                              |
 |:--------|:-----------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -41,7 +54,7 @@ specific to a user.
 
 ## Per user app data:
 
-Per user app data represents user specific app data.
+Per user app data represents [USER](#user) specific app data.
 
 | OS      | Path template                       | Reference                                                                                                                                                                              |
 |:--------|:------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

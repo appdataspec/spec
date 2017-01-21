@@ -1,5 +1,5 @@
-A specification for determining where app data is stored in the context
-of a given app & platform/OS.
+A specification for standardizing determination of where to store app
+data on a given platform/OS.
 
 > *Be advised: the op spec is currently at Major version zero. Per the
 > semantic versioning spec: "Major version zero (0.y.z) is for initial
