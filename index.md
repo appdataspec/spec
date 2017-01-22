@@ -14,8 +14,7 @@
 
 ## Purpose
 
-The app data spec's purpose is to standardize determination of where to
-store app data on a given platform/OS.
+The app data spec's purpose is to determine where app data is stored on a given platform/OS.
 
 ## Terms
 
