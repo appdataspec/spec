@@ -1,4 +1,4 @@
-A specification for standardizing determination of where to store app
+A specification for determining where to store app
 data on a given platform/OS.
 
 > *Be advised: the op spec is currently at Major version zero. Per the
